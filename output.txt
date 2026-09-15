@@ -1,0 +1,22 @@
+Enter number of relief items: 4
+Enter boat capacity (kg): 50
+
+Enter item details:
+Name Weight Value Divisible(1/0)
+Rice 20 100 1
+Water 15 120 1
+Tent 25 150 0
+Medicine 10 100 1
+
+Selected Relief Supplies:
+
+Item	Taken Weight	Utility	Fraction
+Water	15.00		120.00	1.00
+Rice	20.00		100.00	1.00
+Medicine	10.00		100.00	1.00
+Tent	5.00		30.00	0.20
+
+----------------------------------------
+Total Weight: 50.00 kg
+Total Utility: 350.00
+Remaining Capacity: 0.00 kg
