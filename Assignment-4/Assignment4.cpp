@@ -20,7 +20,6 @@ void dijkstra(int graph[MAX][MAX], int n, int source,
 
         int u = -1;
 
-        // Find unvisited vertex with minimum distance
         for (int i = 0; i < n; i++) {
             if (!visited[i] &&
                 (u == -1 || dist[i] < dist[u])) {
@@ -33,7 +32,6 @@ void dijkstra(int graph[MAX][MAX], int n, int source,
 
         visited[u] = true;
 
-        // Relax adjacent vertices
         for (int v = 0; v < n; v++) {
 
             if (!visited[v] &&
@@ -48,8 +46,7 @@ void dijkstra(int graph[MAX][MAX], int n, int source,
     }
 }
 
-void printPath(int parent[], int source, int destination,
-               ofstream &fout) {
+void printPath(int parent[], int source, int destination) {
 
     int path[MAX];
     int count = 0;
@@ -60,47 +57,48 @@ void printPath(int parent[], int source, int destination,
         current = parent[current];
     }
 
-    // No path exists
     if (path[count - 1] != source) {
-        fout << "No path exists.\n";
+        cout << "No path exists.\n";
         return;
     }
 
-    fout << "Shortest Path: ";
+    cout << "Shortest Path: ";
 
     for (int i = count - 1; i >= 0; i--) {
 
-        fout << path[i];
+        cout << path[i];
 
         if (i != 0)
-            fout << " -> ";
+            cout << " -> ";
     }
 
-    fout << endl;
+    cout << endl;
 }
 
 int main() {
 
-    ifstream fin("inputd.txt");
-    ofstream fout("output.txt");
-
-    if (!fin) {
-        cerr << "Error opening inputd.txt\n";
-        return 1;
-    }
-
     int n, m;
 
-    fin >> n >> m;
+    cout << "===== Dijkstra's Shortest Path Algorithm =====\n\n";
+
+    cout << "Enter number of vertices: ";
+    cin >> n;
+
+    cout << "Enter number of edges: ";
+    cin >> m;
 
     int graph[MAX][MAX] = {0};
 
-    // Read m edges
+    cout << "\nEnter each edge in the format:\n";
+    cout << "Source Vertex  Destination Vertex  Weight\n";
+    cout << "Example: 0 1 4\n\n";
+
     for (int i = 0; i < m; i++) {
 
         int u, v, w;
 
-        fin >> u >> v >> w;
+        cout << "Enter edge " << i + 1 << ": ";
+        cin >> u >> v >> w;
 
         graph[u][v] = w;
         graph[v][u] = w;
@@ -108,25 +106,28 @@ int main() {
 
     int source, destination;
 
-    fin >> source >> destination;
+    cout << "\nEnter source vertex: ";
+    cin >> source;
+
+    cout << "Enter destination vertex: ";
+    cin >> destination;
 
     int dist[MAX];
     int parent[MAX];
 
     dijkstra(graph, n, source, dist, parent);
 
+    cout << "\n========== Result ==========\n";
+
     if (dist[destination] == INT_MAX) {
-        fout << "No path exists.\n";
+        cout << "No path exists.\n";
     }
     else {
-        fout << "Shortest Distance: "
+        cout << "Shortest Distance: "
              << dist[destination] << endl;
 
-        printPath(parent, source, destination, fout);
+        printPath(parent, source, destination);
     }
-
-    fin.close();
-    fout.close();
 
     return 0;
 }
