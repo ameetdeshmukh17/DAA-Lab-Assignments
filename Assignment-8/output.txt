@@ -1,0 +1,2 @@
+Optimal route: 1 -> 2 -> 4 -> 3 -> 1
+Minimum cost: 80
