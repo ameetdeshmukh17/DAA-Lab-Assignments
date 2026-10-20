@@ -1,4 +1,6 @@
-Minimum cost from 1 to 6: 8
-Route: 1 -> 3 -> 5 -> 6
-Minimum cost from 2 to 6: 7
-Route: 2 -> 4 -> 6
+Maximum utility: 31
+Selected items (item: weight, utility):
+Item 1: 2 kg, utility 6
+Item 2: 3 kg, utility 10
+Item 4: 5 kg, utility 15
+Total weight: 10 kg / 10 kg
