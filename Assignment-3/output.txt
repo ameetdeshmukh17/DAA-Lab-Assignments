@@ -1,4 +1,4 @@
-cd "c:\Users\Kaustubh\Desktop\coding\Linked List\" ; if ($?) { g++ kNAPSACK.CPP -o kNAPSACK } ; if ($?) { .\kNAPSACK }
+
 Enter maximum weight capacity of the boat (in kg): 20
 
 Sorted Items (by Priority, then Value/Weight):
