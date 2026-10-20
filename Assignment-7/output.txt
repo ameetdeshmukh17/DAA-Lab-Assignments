@@ -1,4 +1,4 @@
-PS C:\Users\Kaustubh\Desktop\ASS7> cd "c:\Users\Kaustubh\Desktop\ASS7\" ; if ($?) { g++ ass7.cpp -o ass7 } ; if ($?) { .\ass7 }
+
 
 ===== EXAM TIMETABLE =====
 Number of courses: 5
@@ -11,4 +11,4 @@ Slot 3 [RED]: Course 3, Course 4
 Conflict check: PASS
 
 Results saved to output.txt
-PS C:\Users\Kaustubh\Desktop\ASS7> 
+
