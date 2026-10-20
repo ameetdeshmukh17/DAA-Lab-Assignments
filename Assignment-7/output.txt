@@ -1,0 +1,5 @@
+Minimum exam slots found by Welsh-Powell greedy coloring: 3
+Slot 1: Course 2
+Slot 2: Course 3, Course 5
+Slot 3: Course 1, Course 4
+Conflict check: PASS - no overlapping exams share a slot.
